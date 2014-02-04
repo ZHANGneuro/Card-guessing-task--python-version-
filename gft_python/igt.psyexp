@@ -1,0 +1,545 @@
+<PsychoPy2experiment version="1.79.01" encoding="utf-8">
+  <Settings>
+    <Param name="Show mouse" val="False" valType="bool" updates="None"/>
+    <Param name="Save csv file" val="True" valType="bool" updates="None"/>
+    <Param name="Monitor" val="testMonitor" valType="str" updates="None"/>
+    <Param name="Enable Escape" val="True" valType="bool" updates="None"/>
+    <Param name="color" val="$[0,0,0]" valType="str" updates="None"/>
+    <Param name="Window size (pixels)" val="[1280, 800]" valType="code" updates="None"/>
+    <Param name="Full-screen window" val="False" valType="bool" updates="None"/>
+    <Param name="colorSpace" val="rgb" valType="str" updates="None"/>
+    <Param name="Save log file" val="False" valType="bool" updates="None"/>
+    <Param name="Experiment info" val="{u'session': u'001', u'participant': u''}" valType="code" updates="None"/>
+    <Param name="Save excel file" val="True" valType="bool" updates="None"/>
+    <Param name="Save wide csv file" val="False" valType="bool" updates="None"/>
+    <Param name="Save psydat file" val="True" valType="bool" updates="None"/>
+    <Param name="expName" val="igt" valType="str" updates="None"/>
+    <Param name="logging level" val="exp" valType="code" updates="None"/>
+    <Param name="Units" val="use prefs" valType="str" updates="None"/>
+    <Param name="Show info dlg" val="True" valType="bool" updates="None"/>
+    <Param name="Saved data folder" val="" valType="code" updates="None"/>
+    <Param name="Screen" val="1" valType="num" updates="None"/>
+  </Settings>
+  <Routines>
+    <Routine name="trial">
+      <CodeComponent name="random_sidecard">
+        <Param name="Begin Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="name" val="random_sidecard" valType="code" updates="None"/>
+        <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
+        <Param name="Begin Routine" val="parameter_mirror = 0&#10;import random&#10;card_box=list([1,2])&#10;rand_card=random.choice(card_box)&#10;if rand_card==1:&#10;    targetPos1=[-0.7, 0]#on the left &#10;    targetPos2=[0.7, 0]#on the left&#10;else:&#10;    targetPos1=[0.7, 0]#on the right&#10;    targetPos2=[-0.7, 0]#on the left&#10;" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
+      <TextComponent name="Wait_com">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="Wait_com" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="Wait Computer to Play" valType="str" updates="constant"/>
+        <Param name="stopVal" val="1.0" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="[0, -0.8]" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+      <KeyboardComponent name="key_pressed">
+        <Param name="correctAns" val="" valType="str" updates="constant"/>
+        <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
+        <Param name="name" val="key_pressed" valType="code" updates="None"/>
+        <Param name="stopVal" val="t&gt;=3 or len(key_pressed.keys)&gt;0" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="forceEndRoutine" val="False" valType="bool" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="discard previous" val="True" valType="bool" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="allowedKeys" val="'q','p'" valType="code" updates="constant"/>
+        <Param name="stopType" val="condition" valType="str" updates="None"/>
+        <Param name="startVal" val="1" valType="code" updates="None"/>
+        <Param name="store" val="last key" valType="str" updates="constant"/>
+      </KeyboardComponent>
+      <CodeComponent name="para_mi_1">
+        <Param name="Begin Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="name" val="para_mi_1" valType="code" updates="None"/>
+        <Param name="Each Frame" val="        parameter_mirror = 1" valType="extendedCode" updates="constant"/>
+        <Param name="Begin Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
+      <CodeComponent name="time_computing">
+        <Param name="Begin Experiment" val="instr_th = u''" valType="extendedCode" updates="constant"/>
+        <Param name="name" val="time_computing" valType="code" updates="None"/>
+        <Param name="Each Frame" val="card_selected = 'fakevariable'&#10;Choice_result = 'fakevariable'&#10;if len(key_pressed.keys)&gt;0:&#10; opacity_par_back = 1&#10; opacity_please_wait = 1&#10; opacity_result = 1&#10; opacity_nochoice = 0&#10; mid_disap_time = key_pressed.rt + 0.5&#10; side_disap_time = 1 + key_pressed.rt + 0.5&#10; wait_par_time = key_pressed.rt&#10; if key_pressed.keys == 'q':&#10;    if rand_card==1:&#10;        par_result_image = './image/1.jpg'&#10;        card_selected = 'Black card'&#10;    if rand_card==2:&#10;        par_result_image = './image/2.jpg'&#10;        card_selected = 'Red card'&#10; if key_pressed.keys == 'p':&#10;    if rand_card==1:&#10;        par_result_image = './image/2.jpg'&#10;        card_selected = 'Red card'&#10;    if rand_card==2:&#10;        par_result_image = './image/1.jpg'&#10;        card_selected = 'Black card'&#10;&#10; if par_result_image == com_result_image:&#10;  win_or_loss = 'You Win'&#10;  Choice_result = 'Win'&#10; if par_result_image != com_result_image:&#10;  win_or_loss = 'You Loss'&#10;  Choice_result = 'Loss'&#10;&#10;&#10;if t &gt;= 3 and len(key_pressed.keys)==0:&#10; parameter_mirror = 2&#10; opacity_par_back = 0&#10; opacity_please_wait = 0&#10; opacity_result = 0&#10; par_result_image = './image/1.jpg'&#10; opacity_nochoice = 1&#10; mid_disap_time = 2&#10; side_disap_time = 3&#10; wait_par_time = 2&#10; win_or_loss = 'You Loss'&#10; Choice_result = 'N/A'&#10; card_selected = 'N/A'&#10;&#10;&#10;Sessions.addData('com_choice', card_selected_com)&#10;Sessions.addData('sub_choice', card_selected)&#10;Sessions.addData('feedback', Choice_result)&#10;" valType="extendedCode" updates="constant"/>
+        <Param name="Begin Routine" val="card_selected_com = 'fakevariable'&#10;if thisExternal_loop[u'sessionN'] == 's1':&#10;  instr_th = u'You have finished session1, now you are going to session 2. \r\n\r\nWhen you are ready to start, press&quot;SPACE&quot;'&#10;  if thisSession[u'com_result_pool'] == 1:&#10;      com_result_image = './image/1.jpg'&#10;      card_selected_com = 'Black card'&#10;  if thisSession[u'com_result_pool'] == 2:&#10;      com_result_image = './image/2.jpg'&#10;      card_selected_com = 'Red card'&#10;&#10;if thisExternal_loop[u'sessionN'] == 's2':&#10;  instr_th = u'Thanks'&#10;  if thisSession[u'com_result_pool_s2'] == 1:&#10;      com_result_image = './image/1.jpg'&#10;      card_selected_com = 'Black card'&#10;  if thisSession[u'com_result_pool_s2'] == 2:&#10;      com_result_image = './image/2.jpg'&#10;      card_selected_com = 'Red card'" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
+      <CodeComponent name="top_card_logic">
+        <Param name="Begin Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="name" val="top_card_logic" valType="code" updates="None"/>
+        <Param name="Each Frame" val="if thisSession[u'com_condi'] == 0:  # 1-5 are fake &#10;              opacity_top_card_1 = 0&#10;              opacity_top_card_2 = 0&#10;              opacity_top_card_3 = 0&#10;              opacity_top_card_4 = 0&#10;              opacity_top_card_5 = 0&#10;              top_card_1 = './image/1.jpg' &#10;              top_card_2 = './image/1.jpg'&#10;              top_card_3 = './image/2.jpg'&#10;              top_card_4 = './image/1.jpg'&#10;              top_card_5 = './image/2.jpg'&#10;        &#10;if thisSession[u'com_condi'] == 1: # 2-5 are fake &#10;              opacity_top_card_1 = 1&#10;              opacity_top_card_2 = 0&#10;              opacity_top_card_3 = 0&#10;              opacity_top_card_4 = 0&#10;              opacity_top_card_5 = 0&#10;              top_card_2 = './image/1.jpg'&#10;              top_card_3 = './image/2.jpg'&#10;              top_card_4 = './image/1.jpg'&#10;              top_card_5 = './image/2.jpg'&#10;              if thisExternal_loop[u'sessionN'] == 's1':&#10;                 top_card_1 = './image/2.jpg' # real one&#10;              if thisExternal_loop[u'sessionN'] == 's2':&#10;                 top_card_1 = './image/1.jpg' &#10;&#10;            &#10;if thisSession[u'com_condi'] == 2:&#10;              opacity_top_card_1 = 1&#10;              opacity_top_card_2 = 1&#10;              opacity_top_card_3 = 0&#10;              opacity_top_card_4 = 0&#10;              opacity_top_card_5 = 0&#10;              top_card_3 = './image/2.jpg'&#10;              top_card_4 = './image/1.jpg'&#10;              top_card_5 = './image/2.jpg'&#10;              if thisExternal_loop[u'sessionN'] == 's1':&#10;                 top_card_1 = './image/2.jpg'# real one&#10;                 top_card_2 = './image/1.jpg'# real one&#10;              if thisExternal_loop[u'sessionN'] == 's2':&#10;                 top_card_1 = './image/1.jpg'&#10;                 top_card_2 = './image/2.jpg'&#10;&#10;if thisSession[u'com_condi'] == 3:&#10;              opacity_top_card_1 = 1&#10;              opacity_top_card_2 = 1&#10;              opacity_top_card_3 = 1&#10;              opacity_top_card_4 = 0&#10;              opacity_top_card_5 = 0&#10;              top_card_4 = './image/1.jpg'&#10;              top_card_5 = './image/2.jpg'&#10;              if thisExternal_loop[u'sessionN'] == 's1':&#10;                 top_card_1 = './image/2.jpg'# real one&#10;                 top_card_2 = './image/1.jpg'# real one&#10;                 top_card_3 = './image/1.jpg'# real one&#10;              if thisExternal_loop[u'sessionN'] == 's2':&#10;                 top_card_1 = './image/1.jpg'# real one&#10;                 top_card_2 = './image/2.jpg'# real one&#10;                 top_card_3 = './image/2.jpg'# real one&#10;&#10;            &#10;if thisSession[u'com_condi'] == 4:&#10;              opacity_top_card_1 = 1&#10;              opacity_top_card_2 = 1&#10;              opacity_top_card_3 = 1&#10;              opacity_top_card_4 = 1&#10;              opacity_top_card_5 = 0&#10;              top_card_5 = './image/2.jpg'&#10;              if thisExternal_loop[u'sessionN'] == 's1':&#10;                 top_card_1 = './image/2.jpg'# real one&#10;                 top_card_2 = './image/1.jpg'# real one&#10;                 top_card_3 = './image/1.jpg'# real one&#10;                 top_card_4 = './image/2.jpg'# real one&#10;              if thisExternal_loop[u'sessionN'] == 's2':&#10;                 top_card_1 = './image/1.jpg'# real one&#10;                 top_card_2 = './image/2.jpg'# real one&#10;                 top_card_3 = './image/2.jpg'# real one&#10;                 top_card_4 = './image/1.jpg'# real one&#10;&#10;            &#10;if thisSession[u'com_condi'] == 5:&#10;              opacity_top_card_1 = 1&#10;              opacity_top_card_2 = 1&#10;              opacity_top_card_3 = 1&#10;              opacity_top_card_4 = 1&#10;              opacity_top_card_5 = 1&#10;              if thisExternal_loop[u'sessionN'] == 's1':&#10;                 top_card_1 = './image/2.jpg'# real one&#10;                 top_card_2 = './image/1.jpg'# real one&#10;                 top_card_3 = './image/1.jpg'# real one&#10;                 top_card_4 = './image/2.jpg'# real one&#10;                 top_card_5 = './image/1.jpg'# real one&#10;              if thisExternal_loop[u'sessionN'] == 's2':&#10;                 top_card_1 = './image/1.jpg'# real one&#10;                 top_card_2 = './image/2.jpg'# real one&#10;                 top_card_3 = './image/2.jpg'# real one&#10;                 top_card_4 = './image/1.jpg'# real one&#10;                 top_card_5 = './image/2.jpg'# real one&#10;            &#10;if thisSession[u'com_condi'] &gt; 5:&#10;        prevTrial_5 = Sessions.getEarlierTrial(-5) &#10;        prevTrial_4 = Sessions.getEarlierTrial(-4) &#10;        prevTrial_3 = Sessions.getEarlierTrial(-3) &#10;        prevTrial_2 = Sessions.getEarlierTrial(-2) &#10;        prevTrial_1 = Sessions.getEarlierTrial(-1) &#10;        opacity_top_card_1 = 1&#10;        opacity_top_card_2 = 1&#10;        opacity_top_card_3 = 1&#10;        opacity_top_card_4 = 1&#10;        opacity_top_card_5 = 1&#10;        if thisExternal_loop[u'sessionN'] == 's1':&#10;              if prevTrial_5[u'com_result_pool'] == 1:&#10;                 top_card_1 = './image/1.jpg'&#10;              if prevTrial_5[u'com_result_pool'] == 2:&#10;                 top_card_1 = './image/2.jpg'&#10;&#10;              if prevTrial_4[u'com_result_pool'] == 1:&#10;                 top_card_2 = './image/1.jpg'&#10;              if prevTrial_4[u'com_result_pool'] == 2:&#10;                 top_card_2 = './image/2.jpg'&#10;&#10;              if prevTrial_3[u'com_result_pool'] == 1:&#10;                 top_card_3 = './image/1.jpg'&#10;              if prevTrial_3[u'com_result_pool'] == 2:&#10;                 top_card_3 = './image/2.jpg'&#10;&#10;              if prevTrial_2[u'com_result_pool'] == 1:&#10;                 top_card_4 = './image/1.jpg'&#10;              if prevTrial_2[u'com_result_pool'] == 2:&#10;                 top_card_4 = './image/2.jpg'&#10;&#10;              if prevTrial_1[u'com_result_pool'] == 1:&#10;                 top_card_5 = './image/1.jpg'&#10;              if prevTrial_1[u'com_result_pool'] == 2:&#10;                 top_card_5 = './image/2.jpg'&#10;&#10;        if thisExternal_loop[u'sessionN'] == 's2':&#10;              if prevTrial_5[u'com_result_pool_s2'] == 1:&#10;                 top_card_1 = './image/1.jpg'&#10;              if prevTrial_5[u'com_result_pool_s2'] == 2:&#10;                 top_card_1 = './image/2.jpg'&#10;&#10;              if prevTrial_4[u'com_result_pool_s2'] == 1:&#10;                 top_card_2 = './image/1.jpg'&#10;              if prevTrial_4[u'com_result_pool_s2'] == 2:&#10;                 top_card_2 = './image/2.jpg'&#10;&#10;              if prevTrial_3[u'com_result_pool_s2'] == 1:&#10;                 top_card_3 = './image/1.jpg'&#10;              if prevTrial_3[u'com_result_pool_s2'] == 2:&#10;                 top_card_3 = './image/2.jpg'&#10;&#10;              if prevTrial_2[u'com_result_pool_s2'] == 1:&#10;                 top_card_4 = './image/1.jpg'&#10;              if prevTrial_2[u'com_result_pool_s2'] == 2:&#10;                 top_card_4 = './image/2.jpg'&#10;&#10;              if prevTrial_1[u'com_result_pool_s2'] == 1:&#10;                 top_card_5 = './image/1.jpg'&#10;              if prevTrial_1[u'com_result_pool_s2'] == 2:&#10;                 top_card_5 = './image/2.jpg'&#10;" valType="extendedCode" updates="constant"/>
+        <Param name="Begin Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
+      <ImageComponent name="card_back_par">
+        <Param name="opacity" val="$opacity_par_back" valType="code" updates="set every frame"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="card_back_par" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="0.5" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="[0, -0.35]" valType="code" updates="constant"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="condition" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="len(key_pressed.keys)&gt;0 or parameter_mirror == 2" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="./image/0.jpg" valType="str" updates="constant"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[0.25, 0.55]" valType="code" updates="constant"/>
+      </ImageComponent>
+      <TextComponent name="Wait_par">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="Wait_par" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="Wait Participant to Play" valType="str" updates="constant"/>
+        <Param name="stopVal" val="len(key_pressed.keys)&gt;0 or parameter_mirror == 2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="[0, -0.8]" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="condition" valType="str" updates="None"/>
+        <Param name="startVal" val="1" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+      <TextComponent name="Please_Wait">
+        <Param name="opacity" val="$opacity_please_wait" valType="code" updates="set every frame"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="Please_Wait" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="Please Wait ..." valType="str" updates="constant"/>
+        <Param name="stopVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="[0, -0.8]" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="startType" val="condition" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="condition" valType="str" updates="None"/>
+        <Param name="startVal" val="len(key_pressed.keys)&gt;0 or parameter_mirror == 2" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+      <CodeComponent name="bugfix_plwa">
+        <Param name="Begin Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="name" val="bugfix_plwa" valType="code" updates="None"/>
+        <Param name="Each Frame" val="    Please_Wait.setText(Please_Wait.text, log=False)" valType="extendedCode" updates="constant"/>
+        <Param name="Begin Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
+      <ImageComponent name="card_back_com">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="card_back_com" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="[0, 0.3]" valType="code" updates="constant"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="condition" valType="str" updates="None"/>
+        <Param name="startVal" val="1" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="./image/0.jpg" valType="str" updates="set every frame"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[0.25, 0.55]" valType="code" updates="constant"/>
+      </ImageComponent>
+      <ImageComponent name="black_c">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="black_c" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="$targetPos1" valType="code" updates="set every frame"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="condition" valType="str" updates="None"/>
+        <Param name="startVal" val="0" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="./image/1.jpg" valType="str" updates="constant"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[0.25, 0.55]" valType="code" updates="constant"/>
+      </ImageComponent>
+      <ImageComponent name="red_c">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="red_c" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="$targetPos2" valType="code" updates="set every frame"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="condition" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="./image/2.jpg" valType="str" updates="constant"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[0.25, 0.55]" valType="code" updates="constant"/>
+      </ImageComponent>
+      <ImageComponent name="com_card_result">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="com_card_result" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="1" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="[0, 0.3]" valType="code" updates="constant"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="condition" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="$com_result_image" valType="str" updates="set every frame"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[0.25, 0.55]" valType="code" updates="constant"/>
+      </ImageComponent>
+      <ImageComponent name="par_card_result">
+        <Param name="opacity" val="$opacity_result" valType="code" updates="set every frame"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="par_card_result" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="1.0" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="[0, -0.35]" valType="code" updates="constant"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="condition" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="$par_result_image" valType="str" updates="set every frame"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[0.25, 0.55]" valType="code" updates="constant"/>
+      </ImageComponent>
+      <TextComponent name="winorloss">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="winorloss" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="$win_or_loss" valType="str" updates="set every frame"/>
+        <Param name="stopVal" val="1.0" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="[0, -0.8]" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="startType" val="condition" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+      <TextComponent name="Nochoice">
+        <Param name="opacity" val="$opacity_nochoice" valType="code" updates="set every frame"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="Nochoice" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="No choice was made" valType="str" updates="constant"/>
+        <Param name="stopVal" val="1.0" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="[0, -0.4]" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="startType" val="condition" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+      <CodeComponent name="bugfix_noch">
+        <Param name="Begin Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="name" val="bugfix_noch" valType="code" updates="None"/>
+        <Param name="Each Frame" val="    Nochoice.setText(Nochoice.text, log=False)" valType="extendedCode" updates="constant"/>
+        <Param name="Begin Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
+      <ImageComponent name="top_card_n1">
+        <Param name="opacity" val="$opacity_top_card_1" valType="code" updates="set every frame"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="top_card_n1" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="[-0.5, 0.83]" valType="code" updates="constant"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="condition" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="$top_card_1" valType="str" updates="set every frame"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[0.14, 0.29]" valType="code" updates="constant"/>
+      </ImageComponent>
+      <ImageComponent name="top_card_n2">
+        <Param name="opacity" val="$opacity_top_card_2" valType="code" updates="set every frame"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="top_card_n2" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="[-0.25, 0.83]" valType="code" updates="constant"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="condition" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="$top_card_2" valType="str" updates="set every frame"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[0.14, 0.29]" valType="code" updates="constant"/>
+      </ImageComponent>
+      <ImageComponent name="top_card_n3">
+        <Param name="opacity" val="$opacity_top_card_3" valType="code" updates="set every frame"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="top_card_n3" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="[0, 0.83]" valType="code" updates="constant"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="condition" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="$top_card_3" valType="str" updates="set every frame"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[0.14, 0.29]" valType="code" updates="constant"/>
+      </ImageComponent>
+      <ImageComponent name="top_card_n4">
+        <Param name="opacity" val="$opacity_top_card_4" valType="code" updates="set every frame"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="top_card_n4" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="[0.25, 0.83]" valType="code" updates="constant"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="condition" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="$top_card_4" valType="str" updates="set every frame"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[0.14, 0.29]" valType="code" updates="constant"/>
+      </ImageComponent>
+      <ImageComponent name="top_card_n5">
+        <Param name="opacity" val="$opacity_top_card_5" valType="code" updates="set every frame"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="top_card_n5" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="(parameter_mirror == 1 and t &gt; 1+ key_pressed.rt + 0.5) or parameter_mirror == 2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="[0.5, 0.83]" valType="code" updates="constant"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="condition" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="$top_card_5" valType="str" updates="set every frame"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[0.14, 0.29]" valType="code" updates="constant"/>
+      </ImageComponent>
+    </Routine>
+    <Routine name="instr2">
+      <TextComponent name="instr2_thanks">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="instr2_thanks" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="1.4" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="$instr_th" valType="str" updates="set every frame"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+      <KeyboardComponent name="key_continue">
+        <Param name="correctAns" val="" valType="str" updates="constant"/>
+        <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
+        <Param name="name" val="key_continue" valType="code" updates="None"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="discard previous" val="True" valType="bool" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="allowedKeys" val="'space'" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="store" val="nothing" valType="str" updates="constant"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="instr">
+      <ImageComponent name="image">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="flipVert" val="False" valType="bool" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="image" valType="code" updates="constant"/>
+        <Param name="color" val="$[1,1,1]" valType="str" updates="constant"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="mask" val="None" valType="str" updates="constant"/>
+        <Param name="pos" val="[0,0]" valType="code" updates="constant"/>
+        <Param name="interpolate" val="linear" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="norm" valType="str" updates="None"/>
+        <Param name="texture resolution" val="128" valType="code" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="flipHoriz" val="False" valType="bool" updates="constant"/>
+        <Param name="image" val="./image/inst.png" valType="str" updates="constant"/>
+        <Param name="advancedParams"/>
+        <Param name="size" val="[2,2]" valType="code" updates="constant"/>
+      </ImageComponent>
+      <KeyboardComponent name="start_trial">
+        <Param name="correctAns" val="" valType="str" updates="constant"/>
+        <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
+        <Param name="name" val="start_trial" valType="code" updates="None"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="discard previous" val="True" valType="bool" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="allowedKeys" val="'space'" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0" valType="code" updates="None"/>
+        <Param name="store" val="last key" valType="str" updates="constant"/>
+      </KeyboardComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="instr"/>
+    <LoopInitiator loopType="TrialHandler" name="external_loop">
+      <Param name="conditionsFile" val="trial_loop.xlsx" valType="str" updates="None"/>
+      <Param name="name" val="external_loop" valType="code" updates="None"/>
+      <Param name="random seed" val="" valType="code" updates="None"/>
+      <Param name="loopType" val="sequential" valType="str" updates="None"/>
+      <Param name="nReps" val="1" valType="code" updates="None"/>
+      <Param name="endPoints" val="[0, 1]" valType="num" updates="None"/>
+      <Param name="conditions" val="[{u'sessionN': u's1'}, {u'sessionN': u's2'}]" valType="str" updates="None"/>
+    </LoopInitiator>
+    <LoopInitiator loopType="TrialHandler" name="Sessions">
+      <Param name="conditionsFile" val="trial_com_choices.xlsx" valType="str" updates="None"/>
+      <Param name="name" val="Sessions" valType="code" updates="None"/>
+      <Param name="random seed" val="" valType="code" updates="None"/>
+      <Param name="loopType" val="sequential" valType="str" updates="None"/>
+      <Param name="nReps" val="1" valType="code" updates="None"/>
+      <Param name="endPoints" val="[0, 1]" valType="num" updates="None"/>
+      <Param name="conditions" val="[{u'com_result_pool_s2': 1, u'com_condi': 0, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 1, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 2, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 3, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 4, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 5, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 6, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 7, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 8, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 9, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 10, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 11, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 12, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 13, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 14, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 15, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 16, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 17, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 18, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 19, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 20, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 21, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 22, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 23, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 24, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 25, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 26, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 27, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 28, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 29, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 30, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 31, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 32, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 33, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 34, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 35, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 36, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 37, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 38, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 39, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 40, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 41, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 42, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 43, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 44, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 45, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 46, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 47, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 48, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 49, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 50, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 51, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 52, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 53, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 54, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 55, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 56, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 57, u'com_result_pool': 1}, {u'com_result_pool_s2': 1, u'com_condi': 58, u'com_result_pool': 2}, {u'com_result_pool_s2': 1, u'com_condi': 59, u'com_result_pool': 2}, {u'com_result_pool_s2': 2, u'com_condi': 60, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 61, u'com_result_pool': 1}, {u'com_result_pool_s2': 2, u'com_condi': 62, u'com_result_pool': 1}]" valType="str" updates="None"/>
+    </LoopInitiator>
+    <Routine name="trial"/>
+    <LoopTerminator name="Sessions"/>
+    <Routine name="instr2"/>
+    <LoopTerminator name="external_loop"/>
+  </Flow>
+</PsychoPy2experiment>
